@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { compose } from "redux";
+import { firebaseConnect } from "react-redux-firebase";
 
 class AppNavbar extends React.Component {
   constructor(props) {
@@ -38,6 +41,8 @@ class AppNavbar extends React.Component {
   }
 }
 
-AppNavbar.propTypes = {};
+AppNavbar.propTypes = {
+  firebase: PropTypes.object.isRequired
+};
 
-export default AppNavbar;
+export default firebaseConnect()(AppNavbar);

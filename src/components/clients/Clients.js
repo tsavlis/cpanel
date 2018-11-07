@@ -31,24 +31,16 @@ class Clients extends React.Component {
               <h2>
                 {" "}
                 <i className="fas fa-users" />
-                Clients{" "}
+                To-Dos{" "}
               </h2>
-            </div>
-            <div className="col-md-6">
-              <h5 className="text-right text-secondary">
-                Owned
-                <span className="text-primary">
-                  ${parseFloat(totalowed).toFixed(2)}
-                </span>
-              </h5>
             </div>
           </div>
           <table className="table table-striped">
             <thead className="thead-inverse">
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Balance</th>
+                <th>Tasks</th>
+                <th>Assigned to</th>
+                <th>Deadline</th>
                 <th />
               </tr>
             </thead>
@@ -59,7 +51,7 @@ class Clients extends React.Component {
                     {client.firstName} {client.lastName}
                   </td>
                   <td>{client.email}</td>
-                  <td>${parseFloat(client.balance).toFixed(2)}</td>
+                  <td>{client.balance}</td>
                   <td>
                     <Link
                       to={`/client/${client.id}`}

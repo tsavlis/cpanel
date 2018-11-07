@@ -45,11 +45,11 @@ class AddClient extends React.Component {
         </div>
         <div className="card">
           <div className="card-header">
-            Add Client
+            Add Task
             <div className="card-body">
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                  <label htmlFor="firstname">First Name</label>
+                  <label htmlFor="firstname">Project</label>
                   <input
                     className="form-control"
                     type="text"
@@ -61,7 +61,7 @@ class AddClient extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="lastName">Last Name</label>
+                  <label htmlFor="lastName">Task</label>
                   <input
                     className="form-control"
                     type="text"
@@ -73,7 +73,7 @@ class AddClient extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="firstname">Email</label>
+                  <label htmlFor="firstname">Assign To (email)</label>
                   <input
                     className="form-control"
                     type="email"
@@ -97,7 +97,7 @@ class AddClient extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="balance">Balance</label>
+                  <label htmlFor="balance">Deadline</label>
                   <input
                     className="form-control"
                     type="text"

@@ -106,7 +106,7 @@ class EditClient extends React.Component {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="balance">Balance</label>
+                    <label htmlFor="balance">Deadline</label>
                     <input
                       className="form-control"
                       type="text"

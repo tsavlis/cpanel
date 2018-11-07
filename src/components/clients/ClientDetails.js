@@ -47,7 +47,7 @@ class ClientDetails extends React.Component {
               type="text"
               className="form-control"
               name="balanceUpdateAmount"
-              placeholder="Add New Balance"
+              placeholder="Change the Deadline"
               value={balanceUpdateAmount}
               onChange={this.onChange}
             />
@@ -92,20 +92,20 @@ class ClientDetails extends React.Component {
               <div className="row">
                 <div className="col-md-8 col-sm-6">
                   <h4>
-                    Client ID:{" "}
+                    Project ID:{" "}
                     <span className="text-secondary">{client.id}</span>
                   </h4>
                 </div>
                 <div className="col-md-4 col-sm-6">
                   <h3 className="pull-right">
-                    Balance:
+                    Deadline:
                     <span
                       className={classnames({
                         "text-danger": client.balance > 0,
                         "text-success": client.balance < 1
                       })}
                     >
-                      ${parseFloat(client.balance).toFixed(2)}
+                      {client.balance}
                     </span>{" "}
                     <small>
                       <a

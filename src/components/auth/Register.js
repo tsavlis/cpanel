@@ -25,9 +25,13 @@ class Register extends React.Component {
     const { firebase, notifyUser } = this.props;
     const { email, password } = this.state;
 
-    firebase
-      .createUser({ email, password })
-      .catch(err => notifyUser("That User Allready Exists", "error"));
+    firebase.createUser({ email, password }).catch(err => {
+      if (password.length < 6) {
+        notifyUser("Password needs to be 6 or more digits", "error");
+      } else {
+        notifyUser("That User Allready Exists", "error");
+      }
+    });
   };
 
   componentWillMount() {
